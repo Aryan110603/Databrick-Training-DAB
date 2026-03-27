@@ -1,0 +1,13 @@
+resources:
+  jobs:
+    DAB_STAGING_DEMO:
+      name: DAB_STAGING_DEMO
+      tasks:
+        - task_key: Staging
+          notebook_task:
+            notebook_path: ../notebook/Training 
+              sql.ipynb
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED 
