@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "config": {
+    "bundle": {
+      "name": "Datarbick-Training-DAB",
+      "target": "prod",
+      "mode": "production",
+      "git": {
+        "branch": "test",
+        "origin_url": "https://github.com/Aryan110603/Databrick-Training-DAB.git",
+        "commit": "2ba72290420ac08e9c5aadcc18bcdbe0c4a369db",
+        "bundle_root_path": "Datarbick-Training-DAB"
+      }
+    },
+    "workspace": {
+      "file_path": "/Workspace/Repos/Databricks-Training-DAB/Databrick-Training-DAB/Datarbick-Training-DAB/files"
+    },
+    "resources": {
+      "jobs": {
+        "DAB_STAGING_DEMO": {
+          "id": "671112011969477",
+          "relative_path": "resources/jobs/DAB_STAGING_JOB_DEMO.yml"
+        },
+        "Training_Job": {
+          "id": "137381385473724",
+          "relative_path": "resources/jobs/DAB_TRAINING_JOB.yml"
+        }
+      }
+    },
+    "presets": {
+      "source_linked_deployment": false
+    }
+  },
+  "extra": {
+    "git_folder_path": "/Workspace/Repos/Databricks-Training-DAB/Databrick-Training-DAB"
+  }
+}

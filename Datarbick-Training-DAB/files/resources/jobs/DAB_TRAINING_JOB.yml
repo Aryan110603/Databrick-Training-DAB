@@ -1,0 +1,30 @@
+resources:
+  jobs:
+    Training_Job:
+      name: Training_Job
+      tasks:
+        - task_key: Staging
+          notebook_task:
+            notebook_path: ../notebook/Training 
+              sql.ipynb
+            source: WORKSPACE
+        - task_key: Cleaned
+          depends_on:
+            - task_key: Staging
+          notebook_task:
+            notebook_path: ../notebook/Master_Cleaned.ipynb
+            source: WORKSPACE
+          environment_key: Cleaned_environment
+        - task_key: Datamart
+          depends_on:
+            - task_key: Cleaned
+          notebook_task:
+            notebook_path: ../notebook/Master_Datamart.ipynb
+            source: WORKSPACE
+      queue:
+        enabled: true
+      environments:
+        - environment_key: Cleaned_environment
+          spec:
+            environment_version: "4"
+      performance_target: PERFORMANCE_OPTIMIZED

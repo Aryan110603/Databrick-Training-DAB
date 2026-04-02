@@ -14,18 +14,13 @@ targets:
     workspace:
       host: https://dbc-ec14a6ac-8d69.cloud.databricks.com
 
-  qa:
-    default: false
-    workspace:
-      host: https://dbc-ec14a6ac-8d69.cloud.databricks.com
-
   # The 'prod' target, used for production deployment.
   prod:
     mode: production
     workspace:
       host: https://dbc-ec14a6ac-8d69.cloud.databricks.com
       # We always use /Users/aaryansatere@gmail.com for all resources to make sure we only have a single copy.
-      root_path: /Workspace/Shared/Databrick-Training-DAB/prod
+      root_path: /Workspace/Repos/Databricks-Training-DAB/Databrick-Training-DAB/Datarbick-Training-DAB
     run_as:
       # This runs as aaryansatere@gmail.com in production. We could also use a service principal here,
       # see https://docs.databricks.com/dev-tools/bundles/permissions.html.
